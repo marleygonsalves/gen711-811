@@ -133,6 +133,17 @@ git remote set-url origin git@github.com:YOURUSERNAME/REPOSITORY.git
 ```
 Note: replace 'YOURUSERNAME' with your ***github username***, and 'REPOSITORY' with the name of the repository. In this case, it is whatever you nammed your notebook repo. 
 
+4. **NEW** Set your username and email for Git at RON:
+This last command should get you pushing to repos. Run these two commands:
+```
+git config --global user.name "YOUR_GITHUB_USERNAME"
+```
+hit enter, and then this one:
+```
+git config --global user.email "Jeffrey.miller@unh.edu"
+```
+Use your email. This should work without changing directories into the repository. 
+
 If you've done everything above correctly, new documents and changes should be tracked VScode and Git. To get your changes incorporated into your repository at GitHub, click on the github bubble fork (usually the third icon down on the left of VScode). Enter any random text you want into the 'Message' box, and then hit the commit button. This should upload your new files/changes to your GitHub repo. 
 
 Best practice is to use different authentication keys for different machines (e.g., work laptop vs. personal laptop). If one machine is compromised, you can revoke access for that specific key without affecting others. Go through this process again if you have another computer to work from.
