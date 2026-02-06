@@ -129,4 +129,4 @@ I made a txt tile with history,
 Then searched for the command
     grep '' history.txt
 
-Or do the command (make the absolute path), the do history into 
+pipe history into a grep searching for the command. I didn't do the command so i am not typing it here. my computer died before i could save (eek) but it was fine. Yay!
