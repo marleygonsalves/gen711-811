@@ -4,6 +4,18 @@ teaching: 30
 exercises: 15
 ---
 # Lab4 - 2/13/26
+
+#My Notes
+- absolute directories start with /
+- "cd" takes you to your home directory 
+- "ls -a" shows hidden files. I found this through googling it. 
+- hidden dorectories/files have a . in front of the name
+- !452 will rerun a command (line) from your history
+- history | grep "grep": this is seaching history (which was piped to it) for grep
+- tail -n file, shows last 3 lines of file
+- cp SRR098026.fastq SRR098026-backup.fastq: makes a copy of the file named the next name
+- mv *backup.fastq backup/: moves everything that ends with backup.fastq into the backup folder (new destination)
+
 ::::::::::::::::::::::::::::::::::::::: objectives
 
 - View, search within, copy, move, and rename files. Create new directories.
@@ -25,11 +37,18 @@ exercises: 15
 ### EXERCISE 1: NAVIGATION PRACTICE
 Navigate to your untrimmed_fastq directory in one command
 
+cd /home/users/mgg1026/gen711-811/shell_data/untrimmed_fastq
+
 ### EXERCISE 2: WILDCARDS
 What would the output look like if the wildcard could *not* be matched? Compare the outputs
 
+[mgg1026@ron ~]$ ls *fq
+ls: cannot access '*fq': No such file or directory
+
 ### EXERCISE 3: NAVIGATING PRACTICE
 Navigate to your home directory. From there, list the contents of the untrimmed_fastq directory.
+
+ls /home/users/mgg1026/gen711-811/shell_data/untrimmed_fastq/
 
 
 :::::::::::::::::::::::::::::::::::::::  challenge
@@ -45,6 +64,8 @@ what will `ls ../backup` display?
 4. `original pnas_final pnas_sub`
 
 ![](fig/filesystem-challenge.svg){alt='File System for Challenge Questions'}
+
+- it is 4. oops there is the answer there. 
 
 :::::::::::::::  solution
 
@@ -63,21 +84,38 @@ what will `ls ../backup` display?
 ### EXERCISE 4: FINDING HIDDEN DIRECTORIES
 First navigate to the shell_data directory. There is a hidden directory within this directory. Explore the options for ls to find out how to see hidden directories. List the contents of the directory and identify the name of the text file in that directory.
 
+- contents of .hidden is: youfoundit.txt
+- ls -all, ls -a, ls .*
+- ls -Fa shows all directories with / at end
+- ls -laF, long format, all, show directories with / at end
+- drwxr-xr-x.: permissions, who can read or write over it
+
 Hint: hidden files and folders in Unix start with ., for example .my_hidden_directory
 
 What is the hidden file name in the hidden directory?
 
+- youfoundit.txt
+
 ### EXERCISE 5: HISTORY
 Find the line number in your history for the command that listed all the .sh files in /usr/bin. Rerun that command.
+
+ls /usr/bin/*.sh | wc -l
+!452
 
 ### EXERCISE 6: FILE CONTENTS
 Print out the contents of the ~/shell_data/untrimmed_fastq/SRR097977.fastq file. What is the last line of the file?
 
+C:CCC::CCCCCCCC<8?6A:C28C<608'&&&,'$
+
 ### EXERCISE 7: PATHS
 From your home directory, and without changing directories, use one short command to print the contents of all of the files in the ~/shell_data/untrimmed_fastq directory.
 
+ls /home/users/mgg1026/gen711-811/shell_data/untrimmed_fastq
+
 ### EXERCISE 8: LESS
 What are the next three nucleotides (characters) after the first instance of the sequence quoted above?
+
+CAC
 
 ### File Permissions Help
 The first part of the output for the `-l` flag gives you information about the file's current permissions. There are ten slots in the
