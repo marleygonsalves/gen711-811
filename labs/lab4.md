@@ -42,14 +42,22 @@ cd /home/users/mgg1026/gen711-811/shell_data/untrimmed_fastq
 ### EXERCISE 2: WILDCARDS
 What would the output look like if the wildcard could *not* be matched? Compare the outputs
 
+<<<<<<< HEAD
 [mgg1026@ron ~]$ ls *fq
 ls: cannot access '*fq': No such file or directory
+=======
+ls *fq
+>>>>>>> f74f7dffb5b2d91ade80925cc7551b8ae25f5b2a
 
 ### EXERCISE 3: NAVIGATING PRACTICE
 Navigate to your home directory. From there, list the contents of the untrimmed_fastq directory.
 
+<<<<<<< HEAD
 ls /home/users/mgg1026/gen711-811/shell_data/untrimmed_fastq/
 
+=======
+ls 
+>>>>>>> f74f7dffb5b2d91ade80925cc7551b8ae25f5b2a
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -94,7 +102,11 @@ Hint: hidden files and folders in Unix start with ., for example .my_hidden_dire
 
 What is the hidden file name in the hidden directory?
 
+<<<<<<< HEAD
 - youfoundit.txt
+=======
+
+>>>>>>> f74f7dffb5b2d91ade80925cc7551b8ae25f5b2a
 
 ### EXERCISE 5: HISTORY
 Find the line number in your history for the command that listed all the .sh files in /usr/bin. Rerun that command.
@@ -110,6 +122,7 @@ C:CCC::CCCCCCCC<8?6A:C28C<608'&&&,'$
 ### EXERCISE 7: PATHS
 From your home directory, and without changing directories, use one short command to print the contents of all of the files in the ~/shell_data/untrimmed_fastq directory.
 
+<<<<<<< HEAD
 ls /home/users/mgg1026/gen711-811/shell_data/untrimmed_fastq
 
 ### EXERCISE 8: LESS
@@ -151,3 +164,7 @@ After loading a conda environment, where is the program 'fastqc' stored?
 - The `history` command and the up arrow on your keyboard can be used to repeat recently used commands.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+=======
+### EXERCISE 8: LESS (Sequence = TTTTTq)
+What are the next three nucleotides (characters) after the first instance of the sequence quoted above?
+>>>>>>> f74f7dffb5b2d91ade80925cc7551b8ae25f5b2a
